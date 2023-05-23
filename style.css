@@ -30,3 +30,7 @@
     background-color: chocolate;
     border: 0;
 }
+
+#bottomBanner {
+    align-self: baseline;
+}
