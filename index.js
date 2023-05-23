@@ -19,7 +19,15 @@ document.addEventListener('click', doSomething);
 storageList.forEach(addActiveLine);
 completedStorageList.forEach(addCompletedLine);
 
-mainButton.addEventListener('click', (event) => {
+mainButton.addEventListener('click', execute);
+
+mainInput.addEventListener('keypress', (event) => {
+    if (event.key == 'Enter') {
+        execute();
+    }
+})
+
+function execute () {
     if(!editMode) {
         userInput = document.getElementById('mainInput').value;
         storageList.push(`${userInput} <button class="deleteLine">Investigated!</button>`);
@@ -37,7 +45,7 @@ mainButton.addEventListener('click', (event) => {
         document.getElementById('mainInput').value = '';
         editLineIndex = -1;
     }
-});
+}
 
 function addActiveLine(input) {
     let newListItem = document.createElement('li');
