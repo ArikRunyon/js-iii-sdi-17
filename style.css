@@ -1,7 +1,22 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    color: rgb(164, 216, 60);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 #mainBody {
     background-color: black;
-    color: chartreuse;
+    color: rgb(164, 216, 60);
     font-family: Arial, Helvetica, sans-serif;
+
+    border-style: solid;
+    border-width: .25em;
+    border-radius: 1em;
+    border-color: rgba(248, 156, 36, 0.795);
+    margin: 1em;
 
     display: flex;
     flex-direction: column;
@@ -10,9 +25,10 @@
 }
 
 #mainButton {
-    background-color: chocolate;
+    background-color: rgba(248, 156, 36, 0.795);
     font-size: larger;
     border: 0;
+    border-radius: 1em;
     margin: 1em;
     padding: 1em;
     width: 15em;
@@ -20,17 +36,26 @@
     justify-self: center;
 }
 
-#mainButton:hover {
-    border-color: aqua;
-}
-
-
 .deleteLine {
     width: 8em;
-    background-color: chocolate;
+    background-color: rgba(248, 156, 36, 0.795);
     border: 0;
+    border-radius: .25em;
 }
 
 #bottomBanner {
     align-self: baseline;
+}
+
+li {
+    margin: .25em;
+}
+
+#mainInput {
+    border: .1em;
+    border-radius: .25em;
+    border-color: rgba(248, 156, 36, 0.795);
+    border-style: solid;
+    background-color: black;
+    color: rgb(164, 216, 60);
 }
