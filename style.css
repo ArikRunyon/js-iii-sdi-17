@@ -19,3 +19,14 @@
     text-align: center;
     justify-self: center;
 }
+
+#mainButton:hover {
+    border-color: aqua;
+}
+
+
+.deleteLine {
+    width: 8em;
+    background-color: chocolate;
+    border: 0;
+}
