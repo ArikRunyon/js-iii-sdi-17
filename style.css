@@ -37,11 +37,23 @@ body {
     justify-self: center;
 }
 
+#mainButton:hover {
+    background-color: rgb(120, 96, 187);
+    color: rgb(193, 185, 219);
+    cursor: url(https://cur.cursors-4u.net/toons/too-3/too227.cur), auto !important;
+}
+
 .deleteLine {
     width: 8em;
     background-color: rgba(248, 156, 36, 0.795);
     border: 0;
     border-radius: .25em;
+}
+
+.deleteLine:hover {
+    background-color: rgb(120, 96, 187);
+    color: rgb(193, 185, 219);
+    cursor: url(https://cur.cursors-4u.net/toons/too-3/too227.cur), auto !important;
 }
 
 #bottomBanner {
@@ -61,6 +73,6 @@ li {
     color: rgb(164, 216, 60);
 }
 
-.bodyStyle {
-
+html {
+    cursor: url(https://cur.cursors-4u.net/toons/too-3/too227.cur), auto !important;
 }
