@@ -91,12 +91,24 @@ html {
     cursor: url(https://cur.cursors-4u.net/toons/too-3/too227.cur), auto !important;
 }
 
+#up:hover {
+    background-color: rgb(120, 96, 187);
+    color: rgb(193, 185, 219);
+    cursor: url(https://cur.cursors-4u.net/toons/too-3/too227.cur), auto !important;
+}
+
 #down {
     width: 7em;
     height: 5em;
     background-color: rgba(248, 156, 36, 0.795);
     border: 0;
     border-radius: .25em;
+    cursor: url(https://cur.cursors-4u.net/toons/too-3/too227.cur), auto !important;
+}
+
+#down:hover {
+    background-color: rgb(120, 96, 187);
+    color: rgb(193, 185, 219);
     cursor: url(https://cur.cursors-4u.net/toons/too-3/too227.cur), auto !important;
 }
 

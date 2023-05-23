@@ -65,6 +65,10 @@ function doSomething(event) {
     
     if (element.className == 'deleteLine' && element.parentNode.parentNode.className == 'ActiveList') {
         // deleteLine for ActiveList
+        editMode = false;
+        document.getElementById('mainInput').value = '';
+        editLineIndex = -1;
+
         completedStorageList.push(`${element.parentNode.innerHTML}`);
         localStorage.setItem('completedList', JSON.stringify(completedStorageList));
         addCompletedLine(completedStorageList[completedStorageList.length - 1]);
@@ -128,4 +132,3 @@ function shiftDown () {
         editLineIndex = -1;
     }
 }
-
