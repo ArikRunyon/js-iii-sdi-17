@@ -76,3 +76,34 @@ li {
 html {
     cursor: url(https://cur.cursors-4u.net/toons/too-3/too227.cur), auto !important;
 }
+
+#wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#up {
+    width: 7em;
+    height: 5em;
+    background-color: rgba(248, 156, 36, 0.795);
+    border: 0;
+    border-radius: .25em;
+    cursor: url(https://cur.cursors-4u.net/toons/too-3/too227.cur), auto !important;
+}
+
+#down {
+    width: 7em;
+    height: 5em;
+    background-color: rgba(248, 156, 36, 0.795);
+    border: 0;
+    border-radius: .25em;
+    cursor: url(https://cur.cursors-4u.net/toons/too-3/too227.cur), auto !important;
+}
+
+#uparrow {
+    width: 4em;
+}
+
+#downarrow {
+    width: 4em;
+}

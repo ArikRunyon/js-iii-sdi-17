@@ -2,6 +2,8 @@ let mainButton = document.querySelector('#mainButton');
 let mainList = document.querySelector('#mainList');
 let completedList = document.querySelector('#completedList');
 let mainInput = document.querySelector('#mainInput');
+let upBtn = document.querySelector('#up');
+let downBtn = document.querySelector('#down');
 
 let editMode = false;
 let editLineIndex;
@@ -33,6 +35,7 @@ mainButton.addEventListener('click', (event) => {
         editMode = false;
         mainList.children[editLineIndex].style.color = 'rgb(164, 216, 60)';
         document.getElementById('mainInput').value = '';
+        editLineIndex = -1;
     }
 });
 
@@ -79,6 +82,50 @@ function doSomething(event) {
         editMode = true;
         editLineIndex = storageList.indexOf(element.innerHTML);
         element.style.color = 'red';
+    }
+}
+
+upBtn.addEventListener('click', shiftUp);
+
+function shiftUp () {
+    if(editMode && editLineIndex != 0) {
+        let temp = storageList[editLineIndex - 1];
+        editActiveLine(storageList[editLineIndex], editLineIndex - 1);
+        editActiveLine(temp, editLineIndex);
+        storageList[editLineIndex - 1] = storageList[editLineIndex];
+        storageList[editLineIndex] = temp;
+        localStorage.setItem('list', JSON.stringify(storageList));
+        editMode = false;
+        mainList.children[editLineIndex].style.color = 'rgb(164, 216, 60)';
+        document.getElementById('mainInput').value = '';
+        editLineIndex = -1;
+    } else {
+        editMode = false;
+        mainList.children[editLineIndex].style.color = 'rgb(164, 216, 60)';
+        document.getElementById('mainInput').value = '';
+        editLineIndex = -1;
+    }
+}
+
+downBtn.addEventListener('click', shiftDown);
+
+function shiftDown () {
+    if(editMode && editLineIndex != mainList.getElementsByTagName('li').length - 1) {
+        let temp = storageList[editLineIndex + 1];
+        editActiveLine(storageList[editLineIndex], editLineIndex + 1);
+        editActiveLine(temp, editLineIndex);
+        storageList[editLineIndex + 1] = storageList[editLineIndex];
+        storageList[editLineIndex] = temp;
+        localStorage.setItem('list', JSON.stringify(storageList));
+        editMode = false;
+        mainList.children[editLineIndex].style.color = 'rgb(164, 216, 60)';
+        document.getElementById('mainInput').value = '';
+        editLineIndex = -1;
+    } else {
+        editMode = false;
+        mainList.children[editLineIndex].style.color = 'rgb(164, 216, 60)';
+        document.getElementById('mainInput').value = '';
+        editLineIndex = -1;
     }
 }
 
